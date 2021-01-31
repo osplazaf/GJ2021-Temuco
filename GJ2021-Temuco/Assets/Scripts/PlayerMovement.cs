@@ -20,6 +20,7 @@ public class PlayerMovement : MonoBehaviour {
 		if (Input.GetButtonDown("Jump"))
 		{
 			jump = true;
+			animator.SetBool("isJumping", true);
 		}
 
 		if (Input.GetButtonDown("Crouch"))
@@ -37,5 +38,10 @@ public class PlayerMovement : MonoBehaviour {
 		// Move our character
 		controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
 		jump = false;
+	}
+
+	public void OnLanding()
+    {
+		animator.SetBool("isJumping", false);
 	}
 }
