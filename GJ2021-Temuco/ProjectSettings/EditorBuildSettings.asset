@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Dialogos.unity
+    guid: 5607c4e60f4077b449191bea5dc6fb7b
+  - enabled: 1
+    path: Assets/Scenes/Level00.unity
+    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/IntroducirNombre.unity
+    guid: e3d00db9fe649ed4db3fa5403ff3e695
+  - enabled: 1
+    path: Assets/Scenes/MostrarNombre.unity
+    guid: 9ebf4c415ef72d140ae6af420b7dce19
   m_configObjects: {}
