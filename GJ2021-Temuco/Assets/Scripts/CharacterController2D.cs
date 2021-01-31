@@ -144,5 +144,22 @@ public class CharacterController2D : MonoBehaviour
 		theScale.x *= -1;
 		transform.localScale = theScale;
 	}
+
+	private void OnTriggerEnter2D(Collider2D other)
+	{
+		if (other.gameObject.tag == "Key") {
+			other.gameObject.transform.parent = transform;
+			other.gameObject.transform.position =
+				new Vector3(
+					(float) ((transform.position.x + (m_FacingRight ? 0.5 : -0.5))),
+					(float) (transform.position.y - 0.2),
+					0
+				);
+			// other.gameObject.GetComponent<BoxCollider2D>().enabled = false;
+		}
+		if (other.gameObject.tag == "Item") {
+			// Aquí irá el comportamiento para cuando recoja la trompeta/guitarra
+		}
+	}
 }
 
